@@ -19,7 +19,13 @@ config/icon="res://icon.svg"
 
 __textures="*res://game/autoload/textures.gd"
 
+[display]
+
+window/size/viewport_width=1366
+window/size/viewport_height=768
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.125, 0.122559, 0.124676, 1)
