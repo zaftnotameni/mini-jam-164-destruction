@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://coub3r4mbe0vy"]
+
+[ext_resource type="Shader" path="res://game/materials/shaders/starfield-with-different-stars.gdshader" id="1_n050e"]
+
+[resource]
+shader = ExtResource("1_n050e")
+shader_parameter/parallax_offset = Vector2(0, 0)
+shader_parameter/parallax_strength = Vector2(0, 0)
+shader_parameter/anim_speed = 0.0
+shader_parameter/star_brightness = 0.05
+shader_parameter/dust = 0.125
+shader_parameter/dist_fade = 0.35
+shader_parameter/pixelation = 1000.0
+shader_parameter/quantization_levels = 256
+shader_parameter/dust_color = Color(0.0534058, 0.114502, 0.136719, 1)
+shader_parameter/saturation = 1.0
+shader_parameter/layers = 7.0
+shader_parameter/iterations = 12

@@ -1,3 +1,103 @@
-[gd_scene format=3 uid="uid://cyun80gtg1bbh"]
+[gd_scene load_steps=13 format=3 uid="uid://cyun80gtg1bbh"]
+
+[ext_resource type="Texture2D" uid="uid://c2jul7unle0li" path="res://game/assets/sprites/firework.png" id="1_gueik"]
+[ext_resource type="Script" path="res://game/firework/firework-scene.gd" id="1_igdvv"]
+
+[sub_resource type="Gradient" id="Gradient_ltmhy"]
+
+[sub_resource type="Gradient" id="Gradient_6gkvq"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b6fx3"]
+gradient = SubResource("Gradient_6gkvq")
+width = 12
+height = 12
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_0qp4o"]
+_data = [Vector2(0, 0.497197), 0.0, 0.0, 0, 0, Vector2(1, 0.395179), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_pa2wy"]
+colors = PackedColorArray(1, 0, 0, 1, 0.78125, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ida6x"]
+gradient = SubResource("Gradient_6gkvq")
+width = 12
+height = 12
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_eg0tv"]
+_data = [Vector2(0, 0.497197), 0.0, 0.0, 0, 0, Vector2(1, 0.395179), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_f6ogu"]
+colors = PackedColorArray(1, 0, 0, 1, 0.78125, 1, 0, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gwlje"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gc1b4"]
 
 [node name="Firework" type="Node2D"]
+script = ExtResource("1_igdvv")
+
+[node name="Body" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -64)
+texture = ExtResource("1_gueik")
+
+[node name="Wick" type="Line2D" parent="Body"]
+unique_name_in_owner = true
+position = Vector2(0, 64)
+points = PackedVector2Array(0, 37, 0, 0)
+gradient = SubResource("Gradient_ltmhy")
+texture_mode = 2
+
+[node name="PartyWickFire" type="CPUParticles2D" parent="Body"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-1, 37)
+emitting = false
+amount = 32
+texture = SubResource("GradientTexture2D_b6fx3")
+direction = Vector2(0, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 20.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_0qp4o")
+color_ramp = SubResource("Gradient_pa2wy")
+
+[node name="PartyRocketFire" type="CPUParticles2D" parent="Body"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 63)
+amount = 64
+texture = SubResource("GradientTexture2D_ida6x")
+emission_shape = 3
+emission_rect_extents = Vector2(15, 1)
+direction = Vector2(0, 1)
+gravity = Vector2(0, 60)
+initial_velocity_max = 10.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_eg0tv")
+color_ramp = SubResource("Gradient_f6ogu")
+
+[node name="LightWickArea" type="Area2D" parent="Body"]
+unique_name_in_owner = true
+position = Vector2(-1, 102)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/LightWickArea"]
+position = Vector2(1, -22)
+shape = SubResource("CircleShape2D_gwlje")
+
+[node name="ExplosionTriggerArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -118)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionTriggerArea"]
+shape = SubResource("CircleShape2D_gc1b4")

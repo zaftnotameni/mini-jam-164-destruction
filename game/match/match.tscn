@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://7rg477b2rjyk"]
+
+[ext_resource type="Texture2D" uid="uid://83hjmjaxr45w" path="res://game/assets/sprites/match.png" id="1_et1pg"]
+[ext_resource type="Script" path="res://game/behavior/follows-mouse.gd" id="2_jq6hl"]
+
+[sub_resource type="Gradient" id="Gradient_6gkvq"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5jtlx"]
+gradient = SubResource("Gradient_6gkvq")
+width = 12
+height = 12
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_epi1f"]
+_data = [Vector2(0, 0.497197), 0.0, 0.0, 0, 0, Vector2(1, 0.395179), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_np4ml"]
+colors = PackedColorArray(1, 0, 0, 1, 0.78125, 1, 0, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0bi1j"]
+
+[node name="Match" type="Node2D"]
+
+[node name="Match" type="Sprite2D" parent="."]
+position = Vector2(1, -32)
+texture = ExtResource("1_et1pg")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Match"]
+position = Vector2(-1, -27)
+amount = 32
+texture = SubResource("GradientTexture2D_5jtlx")
+direction = Vector2(0, -1)
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 20.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_epi1f")
+color_ramp = SubResource("Gradient_np4ml")
+
+[node name="MatchFireArea" type="Area2D" parent="."]
+position = Vector2(0, -64)
+metadata/fire = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MatchFireArea"]
+shape = SubResource("CircleShape2D_0bi1j")
+
+[node name="BehaviorFollowsMouse" type="Node2D" parent="."]
+script = ExtResource("2_jq6hl")
