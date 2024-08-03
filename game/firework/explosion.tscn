@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cscxcgckapkyd"]
+[gd_scene load_steps=6 format=3 uid="uid://cscxcgckapkyd"]
 
 [ext_resource type="Gradient" uid="uid://5bpdnmdvasgx" path="res://game/materials/gradients/full-white-to-transparent-white-gradient.tres" id="1_5datq"]
 
@@ -12,9 +12,21 @@ point_count = 2
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.278587), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="Gradient" id="Gradient_pwrpv"]
+offsets = PackedFloat32Array(0, 0.895775)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lvyqf"]
+gradient = SubResource("Gradient_pwrpv")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Explosion" type="CPUParticles2D"]
 scale = Vector2(4, 4)
 amount = 256
+lifetime = 2.0
 explosiveness = 1.0
 direction = Vector2(0, -1)
 spread = 180.0
@@ -26,8 +38,15 @@ linear_accel_max = 10.0
 radial_accel_min = -50.0
 radial_accel_curve = SubResource("Curve_lyf1d")
 scale_amount_min = 0.25
-scale_amount_max = 2.0
+scale_amount_max = 3.0
 scale_amount_curve = SubResource("Curve_uho5s")
 color_ramp = ExtResource("1_5datq")
 hue_variation_min = -1.0
 hue_variation_max = 1.0
+
+[node name="Light" type="PointLight2D" parent="."]
+energy = 2.42
+blend_mode = 2
+range_layer_min = -10
+range_layer_max = 10
+texture = SubResource("GradientTexture2D_lvyqf")

@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3wqpbxyoulkc"]
+[gd_scene load_steps=5 format=3 uid="uid://c3wqpbxyoulkc"]
 
 [ext_resource type="PackedScene" uid="uid://x08hygjyfbnw" path="res://game/level/scenery.tscn" id="1_7xc7l"]
 [ext_resource type="PackedScene" uid="uid://cyun80gtg1bbh" path="res://game/firework/firework.tscn" id="1_qy2lk"]
 [ext_resource type="PackedScene" uid="uid://7rg477b2rjyk" path="res://game/match/match.tscn" id="3_xksgu"]
+
+[sub_resource type="Environment" id="Environment_flpaf"]
+background_mode = 3
+background_canvas_max_layer = 30
+glow_enabled = true
+glow_bloom = 0.2
+glow_hdr_threshold = 0.6
 
 [node name="Main" type="Node2D"]
 
@@ -13,20 +20,30 @@ position = Vector2(521, 684)
 
 [node name="Firework2" parent="." instance=ExtResource("1_qy2lk")]
 position = Vector2(682, 685)
+element_a = 2
 
 [node name="Firework3" parent="." instance=ExtResource("1_qy2lk")]
 position = Vector2(800, 688)
+element_a = 3
 
 [node name="Firework4" parent="." instance=ExtResource("1_qy2lk")]
 position = Vector2(320, 681)
+element_a = 4
 
 [node name="Firework5" parent="." instance=ExtResource("1_qy2lk")]
 position = Vector2(152, 686)
+element_a = 5
 
 [node name="Firework6" parent="." instance=ExtResource("1_qy2lk")]
 position = Vector2(1029, 678)
+element_a = 6
 
 [node name="Firework7" parent="." instance=ExtResource("1_qy2lk")]
 position = Vector2(1273, 687)
+element_a = 4
+element_b = 2
 
 [node name="Match" parent="." instance=ExtResource("3_xksgu")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_flpaf")
