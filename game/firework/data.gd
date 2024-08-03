@@ -1,12 +1,12 @@
 class_name FireworkData extends Resource
 
-# The mapping from ingredient -> Color is from
-# https://www.elementchem.com/2013/12/30/the-chemistry-of-fireworks/
-
+## The mapping from ingredient -> Color is from
+## https://www.elementchem.com/2013/12/30/the-chemistry-of-fireworks/
 enum Element { None, Mg, Sr, Ba, Cu, Ca, Na }
 
 ## todo: nicer/fancier colors (ideally still following the spirite of the element chemistry
 ## todo: invent more colors for different mixtures of elements
+## maybe: 3 element mixtures?
 static func color_of_mix(element_a:Element, element_b:Element) -> Color:
 	var mix := [element_a, element_b]
 	if mix.has(Element.Cu) and mix.has(Element.Sr): return Color.PURPLE
