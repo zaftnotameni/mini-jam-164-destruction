@@ -1,7 +1,13 @@
 class_name AutoloadAudio extends Node
 
+# from ZapSplat, need to add attribution to credits
 static var sfx_match_fire : AudioStreamWAV = load('res://game/assets/audio/match_fire.wav')
+# from ZapSplat, need to add attribution to credits
 static var sfx_smoke : AudioStreamWAV = load('res://game/assets/audio/smoke.wav')
+# from ZapSplat, need to add attribution to credits
+static var sfx_firework_explosion_1 : AudioStreamMP3 = load('res://game/assets/audio/firework_explosion_001.mp3')
+# from ZapSplat, need to add attribution to credits
+static var sfx_firework_explosion_2 : AudioStreamMP3 = load('res://game/assets/audio/firework_explosion_002.mp3')
 
 static func play_once_and_free(sfx:AudioStream):
 	var asp := AudioStreamPlayer.new()

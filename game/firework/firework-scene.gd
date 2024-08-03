@@ -32,6 +32,10 @@ func prepare_explosion() -> CPUParticles2D:
 	explosion.finished.connect(queue_free)
 	explosion.global_position = explosion_trigger_area.global_position
 	get_tree().current_scene.add_child(explosion)
+	if randf() >= 0.5:
+		AutoloadAudio.play_once_and_free(AutoloadAudio.sfx_firework_explosion_1)
+	else:
+		AutoloadAudio.play_once_and_free(AutoloadAudio.sfx_firework_explosion_2)
 	return explosion
 
 func explode_firework():
