@@ -13,37 +13,43 @@ glow_hdr_threshold = 0.6
 
 [node name="Main" type="Node2D"]
 
-[node name="Scenery" parent="." instance=ExtResource("1_7xc7l")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_flpaf")
 
-[node name="Firework" parent="." instance=ExtResource("1_qy2lk")]
+[node name="Terrain" type="CanvasLayer" parent="."]
+
+[node name="Scenery" parent="Terrain" instance=ExtResource("1_7xc7l")]
+
+[node name="Objects" type="CanvasLayer" parent="."]
+
+[node name="Firework" parent="Objects" instance=ExtResource("1_qy2lk")]
 position = Vector2(521, 684)
 
-[node name="Firework2" parent="." instance=ExtResource("1_qy2lk")]
+[node name="Firework2" parent="Objects" instance=ExtResource("1_qy2lk")]
 position = Vector2(682, 685)
 element_a = 2
 
-[node name="Firework3" parent="." instance=ExtResource("1_qy2lk")]
+[node name="Firework3" parent="Objects" instance=ExtResource("1_qy2lk")]
 position = Vector2(800, 688)
 element_a = 3
 
-[node name="Firework4" parent="." instance=ExtResource("1_qy2lk")]
+[node name="Firework4" parent="Objects" instance=ExtResource("1_qy2lk")]
 position = Vector2(320, 681)
 element_a = 4
 
-[node name="Firework5" parent="." instance=ExtResource("1_qy2lk")]
+[node name="Firework5" parent="Objects" instance=ExtResource("1_qy2lk")]
 position = Vector2(152, 686)
 element_a = 5
 
-[node name="Firework6" parent="." instance=ExtResource("1_qy2lk")]
+[node name="Firework6" parent="Objects" instance=ExtResource("1_qy2lk")]
 position = Vector2(1029, 678)
 element_a = 6
 
-[node name="Firework7" parent="." instance=ExtResource("1_qy2lk")]
+[node name="Firework7" parent="Objects" instance=ExtResource("1_qy2lk")]
 position = Vector2(1273, 687)
 element_a = 4
 element_b = 2
 
-[node name="Match" parent="." instance=ExtResource("3_xksgu")]
+[node name="Interaction" type="CanvasLayer" parent="."]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_flpaf")
+[node name="Match" parent="Interaction" instance=ExtResource("3_xksgu")]
