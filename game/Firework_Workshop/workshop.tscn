@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://ylg07yax0wqc"]
+[gd_scene load_steps=6 format=3 uid="uid://ylg07yax0wqc"]
 
 [ext_resource type="Script" path="res://game/Firework_Workshop/workshop.gd" id="1_lh52r"]
 [ext_resource type="PackedScene" uid="uid://c45bx531qipc2" path="res://game/color/color-mix-ui.tscn" id="2_bjic1"]
 [ext_resource type="PackedScene" uid="uid://ec5ysr2lngfx" path="res://game/Firework_Workshop/firework_shapes/explosion_details.tscn" id="2_ytiln"]
 [ext_resource type="FontFile" uid="uid://yjvcnb38idgi" path="res://game/assets/fonts/FlowerExplosion.ttf" id="3_7shxs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a71fp"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="work_shop" type="CanvasLayer"]
 script = ExtResource("1_lh52r")
@@ -65,6 +68,7 @@ text = "Finalize"
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_a71fp")
 
 [node name="explosion" type="Node2D" parent="HBoxContainer/Explosion_Pannel"]
 unique_name_in_owner = true

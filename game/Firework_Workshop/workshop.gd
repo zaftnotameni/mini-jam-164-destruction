@@ -48,3 +48,4 @@ func _on_finalize_pressed() -> void:
 	%Firework_Button.show()
 	%explosion_details.hide()
 	%Color_Mixer.hide()
+	queue_free()
