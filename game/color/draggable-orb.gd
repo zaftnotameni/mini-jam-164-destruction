@@ -1,4 +1,3 @@
-@tool
 class_name DraggableOrb extends ColorRect
 
 @export var element : FireworkData.Element
@@ -28,4 +27,3 @@ func update_color_based_on_element():
 	material.set_shader_parameter('fill_value', 0.5)
 	material.set_shader_parameter('frontFillInnerColour', ColorMixingLogic.mix_elements([element]))
 	material.set_shader_parameter('backFillColour', ColorMixingLogic.mix_elements([element]).lightened(0.2))
-

@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://ylg07yax0wqc"]
+
+[ext_resource type="Script" path="res://game/Firework_Workshop/workshop.gd" id="1_lh52r"]
+[ext_resource type="PackedScene" uid="uid://c45bx531qipc2" path="res://game/color/color-mix-ui.tscn" id="2_bjic1"]
+[ext_resource type="PackedScene" uid="uid://ec5ysr2lngfx" path="res://game/Firework_Workshop/firework_shapes/explosion_details.tscn" id="2_ytiln"]
+
+[node name="work_shop" type="CanvasLayer"]
+script = ExtResource("1_lh52r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Firework_Button" type="Button" parent="HBoxContainer/ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "create irework"
+
+[node name="explosion_details" parent="HBoxContainer/ColorRect/VBoxContainer" instance=ExtResource("2_ytiln")]
+layout_mode = 2
+
+[node name="Color_Mixer" parent="HBoxContainer/ColorRect/VBoxContainer" instance=ExtResource("2_bjic1")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/ColorRect/VBoxContainer/Color_Mixer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 42
+text = "Finalize"
+
+[node name="Explosion_Pannel" type="Panel" parent="HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="explosion" type="Node2D" parent="HBoxContainer/Explosion_Pannel"]
+unique_name_in_owner = true
+position = Vector2(340, 350)
+
+[connection signal="pressed" from="HBoxContainer/ColorRect/VBoxContainer/Firework_Button" to="." method="_on_button_pressed"]
+[connection signal="new_color_update" from="HBoxContainer/ColorRect/VBoxContainer/Color_Mixer" to="." method="_on_color_mixer_new_color_update"]

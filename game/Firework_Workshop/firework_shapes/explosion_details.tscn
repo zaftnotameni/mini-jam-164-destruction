@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://ec5ysr2lngfx"]
+
+[ext_resource type="Script" path="res://game/Firework_Workshop/firework_shapes/explosion_details.gd" id="1_1if8j"]
+
+[node name="explosion_details" type="VBoxContainer"]
+offset_right = 65.0
+offset_bottom = 122.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_1if8j")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Pick shape"
+horizontal_alignment = 1
+
+[node name="sprite_container" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Sprites" type="HBoxContainer" parent="sprite_container"]
+custom_minimum_size = Vector2(50, 100)
+layout_mode = 2

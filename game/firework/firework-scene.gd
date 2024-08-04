@@ -44,12 +44,16 @@ func prepare_explosion() -> CPUParticles2D:
 	explosion.finished.connect(queue_free)
 
 	# finally add the explosion to the tree and play a random audio for it
-	get_tree().current_scene.add_child(explosion)
+	request_smoke()
+	get_tree().get_first_node_in_group('explosions-layer').add_child(explosion)
 	if randf() >= 0.5:
 		AutoloadAudio.play_once_and_free(AutoloadAudio.sfx_firework_explosion_1)
 	else:
 		AutoloadAudio.play_once_and_free(AutoloadAudio.sfx_firework_explosion_2)
 	return explosion
+
+func request_smoke():
+	__bus.sig_smoke_emission_requested.emit(0.2, Color.WHITE_SMOKE, 5.0)
 
 func explode_firework():
 	if stage != Stage.ROCKET: return
