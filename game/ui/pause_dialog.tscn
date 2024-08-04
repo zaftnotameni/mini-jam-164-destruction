@@ -58,6 +58,7 @@ text = "Resume"
 flat = true
 
 [node name="SaveBtn" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 focus_mode = 0
 theme_override_colors/font_hover_color = Color(0.992157, 1, 0, 1)
@@ -67,6 +68,7 @@ text = "Save"
 flat = true
 
 [node name="LoadBtn" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 focus_mode = 0
 theme_override_colors/font_hover_color = Color(0.992157, 1, 0, 1)
