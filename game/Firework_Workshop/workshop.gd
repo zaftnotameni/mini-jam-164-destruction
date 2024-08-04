@@ -38,11 +38,11 @@ func _on_explosion_details_new_shape_update(path: String) -> void:
 		firework_data.explosion_textures = [explosion.texture]
 
 func _on_finalize_pressed() -> void:
-	# todo: show an error indicating you need to name your firework
 	if not name_line.text or name_line.text.is_empty():
-		push_error('missing firework name')
-		return
-	firework_data.friendly_name = name_line.text
+		firework_data.friendly_name = 'NO NAME'
+	else:
+		firework_data.friendly_name = name_line.text
+
 	firework_data.elements = get_tree().get_first_node_in_group('color-mixer-droppable-orb').elements
 	__library.save_firework(firework_data)
 	%Firework_Button.show()

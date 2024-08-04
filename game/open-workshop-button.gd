@@ -11,8 +11,8 @@ var x_max : float
 var y_min : float
 var y_max : float
 
-var fireworks_per_second : float = 0.2
-var fireworks_per_second_per_second : float = 0.01
+var fireworks_per_second : float = 0.20
+var fireworks_per_second_per_second : float = 0.0001
 var max_fireworks_per_second : int = 2
 var max_fireworks: int = 200
 var elapsed_since_last : float = 0
