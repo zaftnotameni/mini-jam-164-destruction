@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3wqpbxyoulkc"]
+[gd_scene load_steps=14 format=3 uid="uid://c3wqpbxyoulkc"]
 
 [ext_resource type="PackedScene" uid="uid://x08hygjyfbnw" path="res://game/level/scenery.tscn" id="1_7xc7l"]
 [ext_resource type="Script" path="res://game/main.gd" id="1_wdnfr"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://7rg477b2rjyk" path="res://game/match/match.tscn" id="3_xksgu"]
 [ext_resource type="PackedScene" uid="uid://bdql8d4bdoouq" path="res://game/ui/hud.tscn" id="4_i1fi1"]
 [ext_resource type="Shader" path="res://game/materials/shaders/smoke-overlay.gdshader" id="4_w4rjk"]
+[ext_resource type="Script" path="res://game/open-workshop-button.gd" id="7_70rs8"]
+[ext_resource type="Theme" uid="uid://0h6us4pe5qfi" path="res://game/assets/themes/global.tres" id="7_a6gjm"]
+[ext_resource type="Texture2D" uid="uid://bbj5qdmw1gtgb" path="res://game/assets/images/ui/gear.png" id="7_ec77c"]
 
 [sub_resource type="Environment" id="Environment_flpaf"]
 background_mode = 3
@@ -24,7 +27,7 @@ domain_warp_type = 1
 seamless = true
 noise = SubResource("FastNoiseLite_g1u30")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1e2o6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fmq8a"]
 resource_local_to_scene = true
 shader = ExtResource("4_w4rjk")
 shader_parameter/density = 0.174
@@ -49,7 +52,7 @@ environment = SubResource("Environment_flpaf")
 [node name="Explosions" type="CanvasLayer" parent="." groups=["explosions-layer"]]
 
 [node name="Control" parent="Explosions" instance=ExtResource("3_o6h5x")]
-material = SubResource("ShaderMaterial_1e2o6")
+material = SubResource("ShaderMaterial_fmq8a")
 
 [node name="Fireworks" type="CanvasLayer" parent="." groups=["fireworks-layer"]]
 
@@ -57,4 +60,35 @@ material = SubResource("ShaderMaterial_1e2o6")
 
 [node name="Match" parent="Interaction" instance=ExtResource("3_xksgu")]
 
+[node name="TextureButton" type="TextureButton" parent="Interaction"]
+unique_name_in_owner = true
+offset_left = 1261.0
+offset_top = 7.0
+offset_right = 1361.0
+offset_bottom = 107.0
+texture_normal = ExtResource("7_ec77c")
+texture_pressed = ExtResource("7_ec77c")
+texture_hover = ExtResource("7_ec77c")
+texture_disabled = ExtResource("7_ec77c")
+texture_focused = ExtResource("7_ec77c")
+script = ExtResource("7_70rs8")
+
+[node name="FirstFireworkLabel" type="Label" parent="Interaction"]
+unique_name_in_owner = true
+offset_left = 765.0
+offset_top = 39.0
+offset_right = 1263.0
+offset_bottom = 82.0
+theme = ExtResource("7_a6gjm")
+text = "Create your first FIREWORK =>"
+
 [node name="Hud" parent="." instance=ExtResource("4_i1fi1")]
+visible = false
+
+[node name="TL" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(46, 702)
+
+[node name="BR" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1326, 728)

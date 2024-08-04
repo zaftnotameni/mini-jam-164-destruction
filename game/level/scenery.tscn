@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://x08hygjyfbnw"]
 
 [ext_resource type="Material" uid="uid://bvw6aakbai2bx" path="res://game/materials/starfield-with-nebula-material.tres" id="1_78l1v"]
-[ext_resource type="Script" path="res://game/level/select-firework-ui.gd" id="2_y5epq"]
+[ext_resource type="Script" path="res://game/level/earth-ground-fireworks-receptacle.gd" id="2_ljsw2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ipas8"]
 size = Vector2(1404, 275)
@@ -21,6 +21,7 @@ offset_top = 709.0
 offset_right = 1376.0
 offset_bottom = 780.0
 color = Color(0.28125, 0.18457, 0.18457, 1)
+script = ExtResource("2_ljsw2")
 
 [node name="FireworksExplodeWhenTouchingThisArea" type="Area2D" parent="."]
 metadata/explodes_fireworks = true
@@ -28,16 +29,3 @@ metadata/explodes_fireworks = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FireworksExplodeWhenTouchingThisArea"]
 position = Vector2(692, 127.5)
 shape = SubResource("RectangleShape2D_ipas8")
-
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_left = 930.0
-offset_right = 1358.0
-offset_bottom = 774.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-layout_mode = 2
-script = ExtResource("2_y5epq")
-
-[node name="CreateFireworkAt" type="Marker2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(388, 644)
