@@ -98,4 +98,3 @@ func on_fire_entered_light_wick_area():
 func _ready() -> void:
 	light_wick_area.area_entered.connect(on_area_entered_light_wick_area)
 	explosion_trigger_area.area_entered.connect(on_area_entered_explosion_trigger_area)
-

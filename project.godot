@@ -11,21 +11,27 @@ config_version=5
 [application]
 
 config/name="Minijam 164 - Destruction"
-run/main_scene="res://game/main.tscn"
+run/main_scene="res://game/ui/title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://game/assets/icons/icon.svg"
 
 [autoload]
 
 __textures="*res://game/autoload/textures.gd"
 __scenes="*res://game/autoload/scenes.gd"
 __audio="*res://game/autoload/audio.gd"
+GameStateService="*res://addons/game_state_helper/game_state_service.gd"
+TransitionMgr="*res://addons/transition_mgr/transition_mgr.tscn"
 
 [display]
 
 window/size/viewport_width=1366
 window/size/viewport_height=768
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/game_state_helper/plugin.cfg", "res://addons/transition_mgr/plugin.cfg")
 
 [rendering]
 

@@ -22,4 +22,3 @@ static func color_of_element(element:Element) -> Color:
 		Element.Na: return Color.YELLOW
 		Element.Mg: return Color.WHITE
 	return Color.HOT_PINK
-

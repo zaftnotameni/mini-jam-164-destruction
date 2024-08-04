@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3w8uguxyn4lg"]
+
+[ext_resource type="Script" path="res://game/utils/full_screen_mgr.gd" id="1"]
+
+[node name="FullScreenMgr" type="Node"]
+process_mode = 2
+script = ExtResource("1")
