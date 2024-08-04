@@ -1,4 +1,9 @@
-extends Node
+class_name ColorMixingLogic extends Resource
+
+static func mix_elements(elements:Array[FireworkData.Element]) -> Color:
+	var colors : Array[Color] = []
+	for element in elements: colors.push_back(FireworkData.color_of_element(element))
+	return mix_colors(colors)
 
 static func mix_colors(colors:Array[Color]) -> Color:
 	var total_r : float = 0

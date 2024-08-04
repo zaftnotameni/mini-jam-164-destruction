@@ -18,8 +18,9 @@ config/icon="res://game/assets/icons/icon.svg"
 [autoload]
 
 __textures="*res://game/autoload/textures.gd"
-__scenes="*res://game/autoload/scenes.gd"
+__materials="*res://game/autoload/materials.gd"
 __audio="*res://game/autoload/audio.gd"
+__scenes="*res://game/autoload/scenes.gd"
 GameStateService="*res://addons/game_state_helper/game_state_service.gd"
 TransitionMgr="*res://addons/transition_mgr/transition_mgr.tscn"
 
