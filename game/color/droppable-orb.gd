@@ -1,9 +1,10 @@
-@tool
 class_name DroppableOrb extends ColorRect
 
 @export var elements : Array[FireworkData.Element]
+var parent : Color_Mixer
 
 func _enter_tree() -> void:
+	parent = get_parent()
 	if not elements: elements = []
 	update_color_based_on_elements()
 
@@ -25,4 +26,4 @@ func update_color_based_on_elements():
 	material.set_shader_parameter('frontFillInnerColour', ColorMixingLogic.mix_elements(elements))
 	material.set_shader_parameter('backFillColour', ColorMixingLogic.mix_elements(elements).lightened(0.2))
 	material.set_shader_parameter('fill_value', -1 + (elements.size() * 0.10))
-
+	parent.current_color = ColorMixingLogic.mix_elements(elements)

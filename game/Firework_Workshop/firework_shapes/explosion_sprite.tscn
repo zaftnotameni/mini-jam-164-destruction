@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dil811h7im3nc"]
+
+[ext_resource type="Texture2D" uid="uid://cotr3cru47iuf" path="res://game/assets/fireworks/circle_01.png" id="1_2f76s"]
+
+[node name="TextureRect" type="TextureRect"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_2f76s")
+expand_mode = 2
