@@ -27,3 +27,5 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 100)
 layout_mode = 2
 script = ExtResource("2_gybwb")
+
+[connection signal="new_shape_update" from="sprite_container/Sprites" to="." method="_on_sprites_new_shape_update"]
