@@ -1,7 +1,7 @@
 extends Control
 
 @onready var _load_game_dlg = $LoadGameDlg
-
+@onready var name_line : LineEdit = %NameLine
 
 func _on_NewGameBtn_pressed():
 	GameStateService.new_game()

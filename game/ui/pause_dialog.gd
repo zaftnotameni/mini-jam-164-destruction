@@ -31,7 +31,7 @@ func _on_LoadBtn_pressed():
 
 
 func _on_MainMenuBtn_pressed():
-	TransitionMgr.transition_to("res://scenes/ui/title.tscn")
+	TransitionMgr.transition_to("res://game/ui/title.tscn")
 
 
 func _show() -> void:
