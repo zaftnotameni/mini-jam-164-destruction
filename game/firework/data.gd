@@ -1,21 +1,29 @@
 class_name FireworkData extends Resource
 
-static func from_firework_to_json(firework_resource:FireworkResource) -> String:
+static func from_firework_to_json_data(firework_resource:FireworkResource) -> Dictionary:
 	var firework_json := {}
 	firework_json['elements'] = firework_resource.elements.map(func(element): return Element.find_key(element))
 	firework_json['friendly_name'] = firework_resource.friendly_name
-	if firework_resource.explosion_texture:
-		firework_json['explosion_texture'] = firework_resource.explosion_texture.resource_path
-	return JSON.stringify(firework_json)
+	firework_json['explosion_amount'] = firework_resource.explosion_amount
+	firework_json['explosion_scale_amount_min'] = firework_resource.explosion_scale_amount_min
+	firework_json['explosion_scale_amount_max'] = firework_resource.explosion_scale_amount_max
+	firework_json['explosion_color'] = '#' + firework_resource.explosion_color.to_html()
+	firework_json['explosion_textures'] = []
+	for texture in firework_resource.explosion_textures:
+		firework_json['explosion_textures'].push_back(texture.resource_path)
+	return firework_json
 
-static func from_json_to_firework(firework_json:String) -> FireworkResource:
-	var firework_data := JSON.parse_string(firework_json) as Dictionary
+static func from_json_data_to_firework(firework_data:Dictionary) -> FireworkResource:
 	var firework_resource := FireworkResource.new()
 	firework_resource.elements = firework_data.elements.map(func(element): return Element[element])
 	firework_resource.friendly_name = firework_data.friendly_name
-	if firework_data.explosion_texture:
-		if ResourceLoader.exists(firework_data.explosion_texture):
-			firework_resource.explosion_texture = load(firework_data.explosion_texture)
+	firework_resource.explosion_amount = firework_data.explosion_amount
+	firework_resource.explosion_scale_amount_min = firework_data.explosion_scale_amount_min
+	firework_resource.explosion_scale_amount_max = firework_data.explosion_scale_amount_max
+	firework_resource.explosion_color = Color(firework_data.explosion_color)
+	for texture in firework_data.explosion_textures:
+		if ResourceLoader.exists(texture):
+			firework_resource.explosion_textures.push_back(load(texture))
 	return firework_resource
 
 ## The mapping from ingredient -> Color is from

@@ -4,6 +4,7 @@ class_name DroppableOrb extends ColorRect
 var parent : Color_Mixer
 
 func _enter_tree() -> void:
+	add_to_group('color-mixer-droppable-orb')
 	parent = get_parent()
 	if not elements: elements = []
 	update_color_based_on_elements()

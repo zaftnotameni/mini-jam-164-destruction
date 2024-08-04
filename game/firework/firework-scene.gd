@@ -3,10 +3,7 @@ class_name FireworkScene extends Node2D
 ## control which stage the firework is at, useful for ignoring later match interactions
 enum Stage { INITIAL, LIT, ROCKET, EXPLOSION, EXPLODED }
 
-## element that will be part of deciding the firework color
-@export var element_a : FireworkData.Element = FireworkData.Element.Mg
-## element that will be part of deciding the firework color
-@export var element_b : FireworkData.Element = FireworkData.Element.None
+@export var firework_data: FireworkResource
 
 ## when this touches an area with metadata explodes_fireworks=true, it trigger the explosion
 @onready var explosion_trigger_area : Area2D = %ExplosionTriggerArea
@@ -36,8 +33,12 @@ func prepare_explosion() -> CPUParticles2D:
 	assert(light, 'expected explosion to have a light named "Light"')
 
 	# sets the appropriate color (according to the mixture) to both the explosion particles and the light
-	explosion.color = FireworkData.color_of_mix(element_a, element_b)
+	explosion.color = firework_data.explosion_color
 	light.color = explosion.color
+	explosion.amount = firework_data.explosion_amount
+	explosion.scale_amount_min = firework_data.explosion_scale_amount_min
+	explosion.scale_amount_max = firework_data.explosion_scale_amount_max
+	explosion.texture = firework_data.explosion_textures[0]
 
 	# prepare to dispose of both the explosion and the remainder of the firework when its done
 	explosion.finished.connect(explosion.queue_free)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ylg07yax0wqc"]
+[gd_scene load_steps=5 format=3 uid="uid://ylg07yax0wqc"]
 
 [ext_resource type="Script" path="res://game/Firework_Workshop/workshop.gd" id="1_lh52r"]
 [ext_resource type="PackedScene" uid="uid://c45bx531qipc2" path="res://game/color/color-mix-ui.tscn" id="2_bjic1"]
 [ext_resource type="PackedScene" uid="uid://ec5ysr2lngfx" path="res://game/Firework_Workshop/firework_shapes/explosion_details.tscn" id="2_ytiln"]
+[ext_resource type="FontFile" uid="uid://yjvcnb38idgi" path="res://game/assets/fonts/FlowerExplosion.ttf" id="3_7shxs"]
 
 [node name="work_shop" type="CanvasLayer"]
 script = ExtResource("1_lh52r")
@@ -40,6 +41,14 @@ text = "create irework"
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+
+[node name="NameLine" type="LineEdit" parent="HBoxContainer/ColorRect/VBoxContainer/explosion_details"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_7shxs")
+theme_override_font_sizes/font_size = 48
+placeholder_text = "Name Your Firework"
+alignment = 1
 
 [node name="Color_Mixer" parent="HBoxContainer/ColorRect/VBoxContainer" instance=ExtResource("2_bjic1")]
 unique_name_in_owner = true

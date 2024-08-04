@@ -22,6 +22,7 @@ __materials="*res://game/autoload/materials.gd"
 __audio="*res://game/autoload/audio.gd"
 __scenes="*res://game/autoload/scenes.gd"
 __bus="*res://game/autoload/bus.gd"
+__library="*res://game/autoload/library.gd"
 GameStateService="*res://addons/game_state_helper/game_state_service.gd"
 TransitionMgr="*res://addons/transition_mgr/transition_mgr.tscn"
 PlayerAccounts="*res://addons/quiver_player_accounts/player_accounts.tscn"
@@ -43,6 +44,8 @@ enabled=PackedStringArray("res://addons/game_state_helper/plugin.cfg", "res://ad
 
 explosions-layer=""
 smoke-layer=""
+fireworks-layer=""
+color-mixer-droppable-orb=""
 
 [gui]
 
