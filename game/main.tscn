@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3wqpbxyoulkc"]
+[gd_scene load_steps=6 format=3 uid="uid://c3wqpbxyoulkc"]
 
 [ext_resource type="PackedScene" uid="uid://x08hygjyfbnw" path="res://game/level/scenery.tscn" id="1_7xc7l"]
 [ext_resource type="PackedScene" uid="uid://cyun80gtg1bbh" path="res://game/firework/firework.tscn" id="1_qy2lk"]
 [ext_resource type="PackedScene" uid="uid://7rg477b2rjyk" path="res://game/match/match.tscn" id="3_xksgu"]
+[ext_resource type="PackedScene" uid="uid://bdql8d4bdoouq" path="res://game/ui/hud.tscn" id="4_i1fi1"]
 
 [sub_resource type="Environment" id="Environment_flpaf"]
 background_mode = 3
@@ -53,3 +54,5 @@ element_b = 2
 [node name="Interaction" type="CanvasLayer" parent="."]
 
 [node name="Match" parent="Interaction" instance=ExtResource("3_xksgu")]
+
+[node name="Hud" parent="." instance=ExtResource("4_i1fi1")]
