@@ -37,6 +37,8 @@ theme_override_font_sizes/font_size = 42
 text = "create irework"
 
 [node name="explosion_details" parent="HBoxContainer/ColorRect/VBoxContainer" instance=ExtResource("2_ytiln")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="Color_Mixer" parent="HBoxContainer/ColorRect/VBoxContainer" instance=ExtResource("2_bjic1")]
@@ -44,7 +46,7 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
-[node name="Button" type="Button" parent="HBoxContainer/ColorRect/VBoxContainer/Color_Mixer"]
+[node name="finalize" type="Button" parent="HBoxContainer/ColorRect/VBoxContainer/Color_Mixer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 42
@@ -60,4 +62,6 @@ unique_name_in_owner = true
 position = Vector2(340, 350)
 
 [connection signal="pressed" from="HBoxContainer/ColorRect/VBoxContainer/Firework_Button" to="." method="_on_button_pressed"]
+[connection signal="new_shape_update" from="HBoxContainer/ColorRect/VBoxContainer/explosion_details" to="." method="_on_explosion_details_new_shape_update"]
 [connection signal="new_color_update" from="HBoxContainer/ColorRect/VBoxContainer/Color_Mixer" to="." method="_on_color_mixer_new_color_update"]
+[connection signal="pressed" from="HBoxContainer/ColorRect/VBoxContainer/Color_Mixer/finalize" to="." method="_on_finalize_pressed"]

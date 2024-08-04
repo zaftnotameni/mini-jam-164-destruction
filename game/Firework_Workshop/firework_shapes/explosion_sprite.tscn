@@ -1,10 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dil811h7im3nc"]
+[gd_scene load_steps=3 format=3 uid="uid://dil811h7im3nc"]
 
-[ext_resource type="Texture2D" uid="uid://cotr3cru47iuf" path="res://game/assets/fireworks/circle_01.png" id="1_2f76s"]
+[ext_resource type="Texture2D" uid="uid://6cd0s210fni6" path="res://game/assets/fireworks/shape_1.png" id="1_41wg5"]
+[ext_resource type="Script" path="res://game/Firework_Workshop/firework_shapes/explosion_sprite.gd" id="2_ypvcm"]
 
-[node name="TextureRect" type="TextureRect"]
+[node name="TextureRect" type="Button"]
+clip_contents = true
 custom_minimum_size = Vector2(100, 100)
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_2f76s")
-expand_mode = 2
+offset_right = 100.0
+offset_bottom = 100.0
+icon = ExtResource("1_41wg5")
+expand_icon = true
+script = ExtResource("2_ypvcm")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
