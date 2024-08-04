@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ec5ysr2lngfx"]
+[gd_scene load_steps=3 format=3 uid="uid://ec5ysr2lngfx"]
 
 [ext_resource type="Script" path="res://game/Firework_Workshop/firework_shapes/explosion_details.gd" id="1_1if8j"]
+[ext_resource type="Script" path="res://game/Firework_Workshop/firework_shapes/sprites.gd" id="2_gybwb"]
 
 [node name="explosion_details" type="VBoxContainer"]
-offset_right = 65.0
-offset_bottom = 122.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 149.0
+grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_1if8j")
@@ -20,5 +23,7 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
 [node name="Sprites" type="HBoxContainer" parent="sprite_container"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 100)
 layout_mode = 2
+script = ExtResource("2_gybwb")

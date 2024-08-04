@@ -27,6 +27,7 @@ TransitionMgr="*res://addons/transition_mgr/transition_mgr.tscn"
 PlayerAccounts="*res://addons/quiver_player_accounts/player_accounts.tscn"
 Leaderboards="*res://addons/quiver_leaderboards/leaderboards.tscn"
 Global="*res://game/autoload/global.gd"
+__shapes="res://game/autoload/shapes.gd"
 
 [display]
 

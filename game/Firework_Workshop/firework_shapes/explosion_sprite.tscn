@@ -1,7 +1,11 @@
-[gd_scene format=3 uid="uid://dil811h7im3nc"]
+[gd_scene load_steps=2 format=3 uid="uid://dil811h7im3nc"]
 
-[node name="TextureRect" type="TextureRect"]
+[ext_resource type="Texture2D" uid="uid://6cd0s210fni6" path="res://game/assets/fireworks/shape_1.png" id="1_41wg5"]
+
+[node name="TextureRect" type="Button"]
+clip_contents = true
 custom_minimum_size = Vector2(100, 100)
-offset_right = 40.0
-offset_bottom = 40.0
-expand_mode = 2
+offset_right = 100.0
+offset_bottom = 100.0
+icon = ExtResource("1_41wg5")
+expand_icon = true
