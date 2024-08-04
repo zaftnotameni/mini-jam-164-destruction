@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://c3wqpbxyoulkc"]
+[gd_scene load_steps=11 format=3 uid="uid://c3wqpbxyoulkc"]
 
 [ext_resource type="PackedScene" uid="uid://x08hygjyfbnw" path="res://game/level/scenery.tscn" id="1_7xc7l"]
-[ext_resource type="PackedScene" uid="uid://cyun80gtg1bbh" path="res://game/firework/firework.tscn" id="1_qy2lk"]
 [ext_resource type="Script" path="res://game/main.gd" id="1_wdnfr"]
 [ext_resource type="PackedScene" uid="uid://bejtqbpgoscpm" path="res://game/smoke/smoke-overlay.tscn" id="3_o6h5x"]
 [ext_resource type="PackedScene" uid="uid://7rg477b2rjyk" path="res://game/match/match.tscn" id="3_xksgu"]
@@ -25,7 +24,7 @@ domain_warp_type = 1
 seamless = true
 noise = SubResource("FastNoiseLite_g1u30")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_odnij"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1e2o6"]
 resource_local_to_scene = true
 shader = ExtResource("4_w4rjk")
 shader_parameter/density = 0.174
@@ -50,37 +49,9 @@ environment = SubResource("Environment_flpaf")
 [node name="Explosions" type="CanvasLayer" parent="." groups=["explosions-layer"]]
 
 [node name="Control" parent="Explosions" instance=ExtResource("3_o6h5x")]
-material = SubResource("ShaderMaterial_odnij")
+material = SubResource("ShaderMaterial_1e2o6")
 
-[node name="Objects" type="CanvasLayer" parent="."]
-
-[node name="Firework" parent="Objects" instance=ExtResource("1_qy2lk")]
-position = Vector2(521, 684)
-
-[node name="Firework2" parent="Objects" instance=ExtResource("1_qy2lk")]
-position = Vector2(682, 685)
-element_a = 2
-
-[node name="Firework3" parent="Objects" instance=ExtResource("1_qy2lk")]
-position = Vector2(800, 688)
-element_a = 3
-
-[node name="Firework4" parent="Objects" instance=ExtResource("1_qy2lk")]
-position = Vector2(320, 681)
-element_a = 4
-
-[node name="Firework5" parent="Objects" instance=ExtResource("1_qy2lk")]
-position = Vector2(152, 686)
-element_a = 5
-
-[node name="Firework6" parent="Objects" instance=ExtResource("1_qy2lk")]
-position = Vector2(1029, 678)
-element_a = 6
-
-[node name="Firework7" parent="Objects" instance=ExtResource("1_qy2lk")]
-position = Vector2(1273, 687)
-element_a = 4
-element_b = 2
+[node name="Fireworks" type="CanvasLayer" parent="." groups=["fireworks-layer"]]
 
 [node name="Interaction" type="CanvasLayer" parent="."]
 
