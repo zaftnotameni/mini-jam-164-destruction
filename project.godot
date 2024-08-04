@@ -21,6 +21,7 @@ __textures="*res://game/autoload/textures.gd"
 __materials="*res://game/autoload/materials.gd"
 __audio="*res://game/autoload/audio.gd"
 __scenes="*res://game/autoload/scenes.gd"
+__bus="*res://game/autoload/bus.gd"
 GameStateService="*res://addons/game_state_helper/game_state_service.gd"
 TransitionMgr="*res://addons/transition_mgr/transition_mgr.tscn"
 PlayerAccounts="*res://addons/quiver_player_accounts/player_accounts.tscn"
@@ -36,6 +37,11 @@ window/stretch/mode="viewport"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/game_state_helper/plugin.cfg", "res://addons/quiver_leaderboards/plugin.cfg", "res://addons/quiver_player_accounts/plugin.cfg", "res://addons/transition_mgr/plugin.cfg")
+
+[global_group]
+
+explosions-layer=""
+smoke-layer=""
 
 [gui]
 
