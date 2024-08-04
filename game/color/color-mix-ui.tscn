@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dfrrcpqffnrc4" path="res://game/color/draggable-orb.tscn" id="1_1eefd"]
 [ext_resource type="PackedScene" uid="uid://naxj6mptenfy" path="res://game/color/droppable-orb.tscn" id="2_asusc"]
 
-[sub_resource type="Shader" id="Shader_c4smx"]
+[sub_resource type="Shader" id="Shader_cn7ad"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -296,7 +296,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6bjj4"]
 resource_local_to_scene = true
-shader = SubResource("Shader_c4smx")
+shader = SubResource("Shader_cn7ad")
 shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
 shader_parameter/frontFillInnerColour = Color(1, 1, 1, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
@@ -308,7 +308,7 @@ shader_parameter/ringWidth = 0.15
 shader_parameter/innerCircleRadiusOffset = 0.0
 shader_parameter/fill_value = 1.0
 
-[sub_resource type="Shader" id="Shader_1iipl"]
+[sub_resource type="Shader" id="Shader_vne4w"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -601,7 +601,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cmuyg"]
 resource_local_to_scene = true
-shader = SubResource("Shader_1iipl")
+shader = SubResource("Shader_vne4w")
 shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
 shader_parameter/frontFillInnerColour = Color(1, 0, 0, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
@@ -613,7 +613,7 @@ shader_parameter/ringWidth = 0.15
 shader_parameter/innerCircleRadiusOffset = 0.0
 shader_parameter/fill_value = 1.0
 
-[sub_resource type="Shader" id="Shader_rng8o"]
+[sub_resource type="Shader" id="Shader_5nyly"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -906,7 +906,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a4ops"]
 resource_local_to_scene = true
-shader = SubResource("Shader_rng8o")
+shader = SubResource("Shader_5nyly")
 shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
 shader_parameter/frontFillInnerColour = Color(0, 1, 0, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
@@ -918,7 +918,7 @@ shader_parameter/ringWidth = 0.15
 shader_parameter/innerCircleRadiusOffset = 0.0
 shader_parameter/fill_value = 1.0
 
-[sub_resource type="Shader" id="Shader_q06a4"]
+[sub_resource type="Shader" id="Shader_5mrwg"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -1211,7 +1211,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_erl4t"]
 resource_local_to_scene = true
-shader = SubResource("Shader_q06a4")
+shader = SubResource("Shader_5mrwg")
 shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
 shader_parameter/frontFillInnerColour = Color(0, 0, 1, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
@@ -1223,7 +1223,7 @@ shader_parameter/ringWidth = 0.15
 shader_parameter/innerCircleRadiusOffset = 0.0
 shader_parameter/fill_value = 1.0
 
-[sub_resource type="Shader" id="Shader_0hby0"]
+[sub_resource type="Shader" id="Shader_d2sol"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -1516,7 +1516,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lnvyl"]
 resource_local_to_scene = true
-shader = SubResource("Shader_0hby0")
+shader = SubResource("Shader_d2sol")
 shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
 shader_parameter/frontFillInnerColour = Color(1, 0.647059, 0, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
@@ -1528,7 +1528,7 @@ shader_parameter/ringWidth = 0.15
 shader_parameter/innerCircleRadiusOffset = 0.0
 shader_parameter/fill_value = 1.0
 
-[sub_resource type="Shader" id="Shader_h4q0d"]
+[sub_resource type="Shader" id="Shader_j8tdl"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -1821,7 +1821,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ty5qa"]
 resource_local_to_scene = true
-shader = SubResource("Shader_h4q0d")
+shader = SubResource("Shader_j8tdl")
 shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
 shader_parameter/frontFillInnerColour = Color(1, 1, 0, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
@@ -1833,7 +1833,7 @@ shader_parameter/ringWidth = 0.15
 shader_parameter/innerCircleRadiusOffset = 0.0
 shader_parameter/fill_value = 1.0
 
-[sub_resource type="Shader" id="Shader_t3mgl"]
+[sub_resource type="Shader" id="Shader_vnx44"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -2126,7 +2126,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_07pqg"]
 resource_local_to_scene = true
-shader = SubResource("Shader_t3mgl")
+shader = SubResource("Shader_vnx44")
 shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
 shader_parameter/frontFillInnerColour = Color(1, 1, 1, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
@@ -2136,7 +2136,7 @@ shader_parameter/innerRingGlowColour = Color(0, 1, 1, 1)
 shader_parameter/fillcolour = Color(1, 1, 1, 1)
 shader_parameter/ringWidth = 0.15
 shader_parameter/innerCircleRadiusOffset = 0.0
-shader_parameter/fill_value = -0.75
+shader_parameter/fill_value = -0.9
 
 [node name="ColorMixUI" type="Control"]
 layout_mode = 3

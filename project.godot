@@ -23,6 +23,9 @@ __audio="*res://game/autoload/audio.gd"
 __scenes="*res://game/autoload/scenes.gd"
 GameStateService="*res://addons/game_state_helper/game_state_service.gd"
 TransitionMgr="*res://addons/transition_mgr/transition_mgr.tscn"
+PlayerAccounts="*res://addons/quiver_player_accounts/player_accounts.tscn"
+Leaderboards="*res://addons/quiver_leaderboards/leaderboards.tscn"
+Global="*res://game/autoload/global.gd"
 
 [display]
 
@@ -32,7 +35,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/game_state_helper/plugin.cfg", "res://addons/transition_mgr/plugin.cfg")
+enabled=PackedStringArray("res://addons/game_state_helper/plugin.cfg", "res://addons/quiver_leaderboards/plugin.cfg", "res://addons/quiver_player_accounts/plugin.cfg", "res://addons/transition_mgr/plugin.cfg")
 
 [gui]
 
@@ -53,6 +56,10 @@ autosave_off={
 "deadzone": 0.5,
 "events": []
 }
+
+[quiver]
+
+general/auth_token="RF1SD5MoI6rArWu4EliUT1BPummNEfgLDZVpVjX5"
 
 [rendering]
 

@@ -16,4 +16,3 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 
 func update_color_based_on_element():
 	material.set_shader_parameter('frontFillInnerColour', ColorMixingLogic.mix_elements([element]))
-

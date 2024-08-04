@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1dowke5fsdap"]
+[gd_scene load_steps=7 format=3 uid="uid://d1dowke5fsdap"]
 
 [ext_resource type="Theme" uid="uid://0h6us4pe5qfi" path="res://game/assets/themes/global.tres" id="1_cv88s"]
 [ext_resource type="Script" path="res://game/ui/title.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://dp8vtge0lck8p" path="res://game/ui/load_game_dlg.tscn" id="3"]
 [ext_resource type="Shader" path="res://game/ui/title.gdshader" id="3_fbsvi"]
+[ext_resource type="PackedScene" uid="uid://dgygkbtm0burn" path="res://addons/quiver_leaderboards/leaderboard_ui.tscn" id="4_g187m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l3ejm"]
 shader = ExtResource("3_fbsvi")
@@ -36,9 +37,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 695.0
-offset_bottom = 112.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 185.0
+grow_horizontal = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 60
 theme_override_constants/margin_right = 20
@@ -48,6 +51,14 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_type_variation = &"title"
 text = "BOOM BOOM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeaderboardUI" parent="." instance=ExtResource("4_g187m")]
+layout_mode = 1
+offset_top = 160.0
+offset_right = -878.0
+leaderboard_id = "boom-boom-new_score-071b"
 
 [node name="MarginContainer3" type="MarginContainer" parent="."]
 layout_mode = 1
