@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://naxj6mptenfy"]
+
+[ext_resource type="Shader" path="res://game/materials/shaders/color-liquid-in-circle.gdshader" id="1_qtei7"]
+[ext_resource type="Script" path="res://game/color/droppable-orb.gd" id="2_n621n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vuqnv"]
+resource_local_to_scene = true
+shader = ExtResource("1_qtei7")
+shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
+shader_parameter/frontFillInnerColour = Color(1, 1, 1, 1)
+shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
+shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
+shader_parameter/fresnelColour = Color(0, 0.88, 1, 1)
+shader_parameter/innerRingGlowColour = Color(0, 1, 1, 1)
+shader_parameter/fillcolour = Color(1, 1, 1, 1)
+shader_parameter/ringWidth = 0.15
+shader_parameter/innerCircleRadiusOffset = 0.0
+shader_parameter/fill_value = -1.0
+
+[node name="DroppableOrb" type="ColorRect"]
+material = SubResource("ShaderMaterial_vuqnv")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_n621n")
+elements = Array[int]([1])

@@ -5,7 +5,6 @@ class_name DroppableOrb extends ColorRect
 
 func _enter_tree() -> void:
 	if not elements: elements = [FireworkData.Element.Mg]
-	material = AutoloadMaterials.color_in_orb
 	update_color_based_on_elements()
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
@@ -18,4 +17,5 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 
 func update_color_based_on_elements():
 	material.set_shader_parameter('frontFillInnerColour', ColorMixingLogic.mix_elements(elements))
+	material.set_shader_parameter('fill_value', -1 + (elements.size() * 0.10))
 

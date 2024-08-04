@@ -3,9 +3,10 @@
 [ext_resource type="Shader" path="res://game/materials/shaders/color-liquid-in-circle.gdshader" id="1_2l013"]
 
 [resource]
+resource_local_to_scene = true
 shader = ExtResource("1_2l013")
 shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
-shader_parameter/frontFillInnerColour = Color(0.35, 1, 1, 1)
+shader_parameter/frontFillInnerColour = Color(1, 1, 1, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
 shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
 shader_parameter/fresnelColour = Color(0, 0.88, 1, 1)
