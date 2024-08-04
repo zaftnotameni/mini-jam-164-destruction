@@ -297,8 +297,8 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_07pqg"]
 resource_local_to_scene = true
 shader = SubResource("Shader_t3mgl")
-shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
-shader_parameter/frontFillInnerColour = Color(1, 1, 1, 1)
+shader_parameter/backFillColour = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/frontFillInnerColour = Color(0, 0, 0, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
 shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
 shader_parameter/fresnelColour = Color(0, 0.88, 1, 1)
@@ -306,7 +306,7 @@ shader_parameter/innerRingGlowColour = Color(0, 1, 1, 1)
 shader_parameter/fillcolour = Color(1, 1, 1, 1)
 shader_parameter/ringWidth = 0.15
 shader_parameter/innerCircleRadiusOffset = 0.0
-shader_parameter/fill_value = -0.9
+shader_parameter/fill_value = -1.0
 
 [sub_resource type="Shader" id="Shader_c4smx"]
 resource_local_to_scene = true
@@ -602,7 +602,7 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6bjj4"]
 resource_local_to_scene = true
 shader = SubResource("Shader_c4smx")
-shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
+shader_parameter/backFillColour = Color(1, 1, 1, 1)
 shader_parameter/frontFillInnerColour = Color(1, 1, 1, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
 shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
@@ -907,7 +907,7 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cmuyg"]
 resource_local_to_scene = true
 shader = SubResource("Shader_1iipl")
-shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
+shader_parameter/backFillColour = Color(1, 0.2, 0.2, 1)
 shader_parameter/frontFillInnerColour = Color(1, 0, 0, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
 shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
@@ -1212,7 +1212,7 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a4ops"]
 resource_local_to_scene = true
 shader = SubResource("Shader_rng8o")
-shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
+shader_parameter/backFillColour = Color(0.2, 1, 0.2, 1)
 shader_parameter/frontFillInnerColour = Color(0, 1, 0, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
 shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
@@ -1517,7 +1517,7 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_erl4t"]
 resource_local_to_scene = true
 shader = SubResource("Shader_q06a4")
-shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
+shader_parameter/backFillColour = Color(0.2, 0.2, 1, 1)
 shader_parameter/frontFillInnerColour = Color(0, 0, 1, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
 shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
@@ -1822,7 +1822,7 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lnvyl"]
 resource_local_to_scene = true
 shader = SubResource("Shader_0hby0")
-shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
+shader_parameter/backFillColour = Color(1, 0.717647, 0.2, 1)
 shader_parameter/frontFillInnerColour = Color(1, 0.647059, 0, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
 shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
@@ -2127,7 +2127,7 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ty5qa"]
 resource_local_to_scene = true
 shader = SubResource("Shader_h4q0d")
-shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
+shader_parameter/backFillColour = Color(1, 1, 0.2, 1)
 shader_parameter/frontFillInnerColour = Color(1, 1, 0, 1)
 shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
 shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmynkooxu3mpj"]
+
+[ext_resource type="PackedScene" uid="uid://c45bx531qipc2" path="res://game/color/color-mix-ui.tscn" id="1_l05dr"]
+[ext_resource type="Texture2D" uid="uid://c2jul7unle0li" path="res://game/assets/sprites/firework.png" id="2_0o4v6"]
+
+[node name="Firework-configuration" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorMixUI" parent="." instance=ExtResource("1_l05dr")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 404.0
+offset_bottom = 728.0
+grow_horizontal = 1
+grow_vertical = 1
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_0o4v6")
