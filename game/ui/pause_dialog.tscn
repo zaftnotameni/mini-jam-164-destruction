@@ -1,45 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bswgagaqfkxrf"]
+[gd_scene load_steps=6 format=3 uid="uid://bswgagaqfkxrf"]
 
 [ext_resource type="Texture2D" uid="uid://bn8508130mlq4" path="res://game/assets/images/white_box_32x32.png" id="1"]
 [ext_resource type="Theme" uid="uid://0h6us4pe5qfi" path="res://game/assets/themes/global.tres" id="1_xkewf"]
 [ext_resource type="Script" path="res://game/ui/pause_dialog.gd" id="2"]
-[ext_resource type="FontFile" uid="uid://dej7qb7q5bxg5" path="res://game/assets/fonts/CooperHewitt-Medium.otf" id="3"]
 [ext_resource type="PackedScene" uid="uid://fhkyjillo30b" path="res://game/ui/save_game_dlg.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://dp8vtge0lck8p" path="res://game/ui/load_game_dlg.tscn" id="5"]
-
-[sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("3")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
-cache/0/100/0/ascent = 0.0
-cache/0/100/0/descent = 0.0
-cache/0/100/0/underline_position = 0.0
-cache/0/100/0/underline_thickness = 0.0
-cache/0/100/0/scale = 1.0
-cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
-
-[sub_resource type="FontFile" id="2"]
-fallbacks = Array[Font]([ExtResource("3")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/48/0/ascent = 0.0
-cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 0.0
-cache/0/48/0/underline_thickness = 0.0
-cache/0/48/0/scale = 1.0
-cache/0/48/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/48/0 = Vector2(0, 0)
 
 [node name="PauseDialog" type="Control"]
 process_mode = 1
@@ -81,46 +46,41 @@ theme_override_colors/font_color = Color(1, 0, 0.607843, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
-theme_override_fonts/font = SubResource("1")
 text = "Pause"
 
 [node name="ResumeBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.921569, 0, 1, 1)
 theme_override_colors/font_hover_color = Color(0.992157, 1, 0, 1)
-theme_override_fonts/font = SubResource("2")
+theme_override_colors/font_pressed_color = Color(0.921569, 0, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Resume"
 flat = true
 
 [node name="SaveBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.921569, 0, 1, 1)
 theme_override_colors/font_hover_color = Color(0.992157, 1, 0, 1)
-theme_override_fonts/font = SubResource("2")
+theme_override_colors/font_pressed_color = Color(0.921569, 0, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Save"
 flat = true
 
 [node name="LoadBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.921569, 0, 1, 1)
 theme_override_colors/font_hover_color = Color(0.992157, 1, 0, 1)
-theme_override_fonts/font = SubResource("2")
+theme_override_colors/font_pressed_color = Color(0.921569, 0, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Load"
 flat = true
 
 [node name="MainMenuBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.921569, 0, 1, 1)
 theme_override_colors/font_hover_color = Color(0.992157, 1, 0, 1)
-theme_override_fonts/font = SubResource("2")
+theme_override_colors/font_pressed_color = Color(0.921569, 0, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Main Menu"
 flat = true
 

@@ -1,29 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bdql8d4bdoouq"]
+[gd_scene load_steps=10 format=3 uid="uid://bdql8d4bdoouq"]
 
 [ext_resource type="PackedScene" uid="uid://beiy6vqvh6lu7" path="res://game/ui/info_dialog.tscn" id="1"]
 [ext_resource type="Script" path="res://game/ui/hud.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://bswgagaqfkxrf" path="res://game/ui/pause_dialog.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://3rf7lin42cle" path="res://game/ui/raw_game_state_dlg.tscn" id="5"]
 [ext_resource type="Theme" uid="uid://0h6us4pe5qfi" path="res://game/assets/themes/global.tres" id="5_5b82o"]
-[ext_resource type="FontFile" uid="uid://dej7qb7q5bxg5" path="res://game/assets/fonts/CooperHewitt-Medium.otf" id="6"]
 [ext_resource type="Texture2D" uid="uid://b8wm1jy3o7wiq" path="res://game/assets/images/ui/saving_icon.png" id="7"]
-
-[sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("6")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
-cache/0/40/0/ascent = 0.0
-cache/0/40/0/descent = 0.0
-cache/0/40/0/underline_position = 0.0
-cache/0/40/0/underline_thickness = 0.0
-cache/0/40/0/scale = 1.0
-cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
 
 [sub_resource type="Animation" id="2"]
 length = 0.001
@@ -139,7 +121,6 @@ theme = ExtResource("5_5b82o")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
-theme_override_fonts/font = SubResource("1")
 horizontal_alignment = 1
 
 [node name="MessageTimer" type="Timer" parent="."]

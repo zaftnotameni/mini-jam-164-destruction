@@ -33,6 +33,10 @@ window/stretch/mode="viewport"
 
 enabled=PackedStringArray("res://addons/game_state_helper/plugin.cfg", "res://addons/transition_mgr/plugin.cfg")
 
+[gui]
+
+theme/custom_font="res://game/assets/fonts/FlowerExplosion.ttf"
+
 [input]
 
 pause={
