@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvo5juu7uaahj"]
+
+[ext_resource type="Shader" path="res://game/test/test.gdshader" id="1_1dbry"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qnjew"]
+resource_local_to_scene = true
+shader = ExtResource("1_1dbry")
+shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
+shader_parameter/frontFillInnerColour = Color(0.35, 1, 1, 1)
+shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
+shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
+shader_parameter/fresnelColour = Color(0, 0.88, 1, 1)
+shader_parameter/innerRingGlowColour = Color(0.386719, 0.0664673, 0.344185, 1)
+shader_parameter/fillcolour = Color(1, 1, 1, 1)
+shader_parameter/ringWidth = 0.15
+shader_parameter/innerCircleRadiusOffset = 0.0
+shader_parameter/fill_value = 0.0850001
+
+[node name="ColorRect" type="ColorRect"]
+material = SubResource("ShaderMaterial_qnjew")
+offset_right = 59.0
+offset_bottom = 53.0
