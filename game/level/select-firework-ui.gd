@@ -4,12 +4,17 @@ const firework_scene := preload('res://game/firework/firework.tscn')
 
 func _enter_tree() -> void:
 	for firework_data in __library.firework_library.my_fireworks:
-		var btn := TextureButton.new()
-		btn.texture_normal = firework_data.explosion_textures[0]
-		btn.texture_pressed = firework_data.explosion_textures[0]
-		btn.texture_hover = firework_data.explosion_textures[0]
-		btn.texture_disabled = firework_data.explosion_textures[0]
-		btn.texture_focused = firework_data.explosion_textures[0]
+		var btn : BaseButton
+		if firework_data.explosion_textures and not firework_data.explosion_textures.is_empty():
+			btn = TextureButton.new()
+			btn.texture_normal = firework_data.explosion_textures[0]
+			btn.texture_pressed = firework_data.explosion_textures[0]
+			btn.texture_hover = firework_data.explosion_textures[0]
+			btn.texture_disabled = firework_data.explosion_textures[0]
+			btn.texture_focused = firework_data.explosion_textures[0]
+		else:
+			btn = Button.new()
+			btn.text = firework_data.friendly_name
 		btn.self_modulate = firework_data.explosion_color
 		btn.pressed.connect(on_button_pressed.bind(firework_data))
 		add_child.call_deferred(btn)

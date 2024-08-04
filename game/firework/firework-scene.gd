@@ -38,7 +38,8 @@ func prepare_explosion() -> CPUParticles2D:
 	explosion.amount = firework_data.explosion_amount
 	explosion.scale_amount_min = firework_data.explosion_scale_amount_min
 	explosion.scale_amount_max = firework_data.explosion_scale_amount_max
-	explosion.texture = firework_data.explosion_textures[0]
+	if firework_data.explosion_textures and not firework_data.explosion_textures.is_empty():
+		explosion.texture = firework_data.explosion_textures[0]
 
 	# prepare to dispose of both the explosion and the remainder of the firework when its done
 	explosion.finished.connect(explosion.queue_free)
